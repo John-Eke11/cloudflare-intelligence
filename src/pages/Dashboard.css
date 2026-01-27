@@ -1,0 +1,154 @@
+.dashboard {
+  min-height: 100vh;
+  background-color: #F8F9FB;
+  padding: 0;
+}
+
+.page-header {
+  width: 100%;
+  background-color: #FFFFFF;
+  border-bottom: 1px solid #E0E3E8;
+  box-sizing: border-box;
+}
+
+.page-header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.page-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000000;
+  margin: 0;
+}
+
+.date-range-selector {
+  display: flex;
+  gap: 0;
+  border-radius: 9999px;
+  overflow: hidden;
+  border: 1px solid #D0D3DA;
+}
+
+.date-range-button {
+  padding: 6px 14px;
+  border: none;
+  background: #E8EBF0;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+  white-space: nowrap;
+}
+
+.date-range-button:not(:last-child) {
+  border-right: 1px solid #D0D3DA;
+}
+
+.date-range-button:hover {
+  background: #D0D3DA;
+}
+
+.date-range-button.active {
+  background: #202E39;
+  color: #FFFFFF;
+  border-color: #202E39;
+}
+
+.charts-section {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 32px 24px;
+  margin-bottom: 24px;
+}
+
+.chart-controls {
+  display: flex;
+  gap: 32px;
+  margin-bottom: 24px;
+  padding: 16px 20px;
+  background: #FFFFFF;
+  border: 1px solid #E0E3E8;
+  border-radius: 8px;
+}
+
+.control-group {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.control-label {
+  font-size: 14px;
+  font-weight: 500;
+  color: #555555;
+}
+
+.segmented-control {
+  display: flex;
+  gap: 0;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #D0D3DA;
+}
+
+.segmented-button {
+  padding: 8px 16px;
+  border: none;
+  background: #F3F5F7;
+  color: #333333;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 150ms ease-in-out;
+  white-space: nowrap;
+}
+
+.segmented-button:not(:last-child) {
+  border-right: 1px solid #D0D3DA;
+}
+
+.segmented-button:hover {
+  background: #E8EBF0;
+}
+
+.segmented-button.active {
+  background: #202E39;
+  color: #FFFFFF;
+  border-color: #202E39;
+}
+
+.charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-bottom: 0;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.loading-container.charts-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 1024px) {
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .loading-container.charts-grid {
+    grid-template-columns: 1fr;
+  }
+}

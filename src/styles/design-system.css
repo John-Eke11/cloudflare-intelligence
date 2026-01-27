@@ -1,0 +1,102 @@
+/* Cloudflare Intelligence Design System - Exact Match */
+
+:root {
+  /* Colors - Exact from images */
+  --color-primary: #2C7BFF;
+  --color-text-primary: #000000;
+  --color-text-secondary: #333333;
+  --color-text-tertiary: #666666;
+  --color-text-meta: #667085;
+  --color-bg-white: #FFFFFF;
+  --color-bg-page: #F8F9FB;
+  --color-bg-inactive: #F3F5F7;
+  --color-bg-active: #202E39;
+  --color-bg-ai-summary: #EBF5F9;
+  --color-border-default: #E0E3E8;
+  --color-border-light: #E5E7EB;
+  --color-border-ai: #DDEEF7;
+  
+  /* Chart Colors - Exact from images */
+  --color-chart-support: #2C7BFF;
+  --color-chart-social: #8A4AD9;
+  --color-chart-github: #3DCB6F;
+  
+  /* Spacing */
+  --spacing-xs: 4px;
+  --spacing-sm: 6px;
+  --spacing-md: 8px;
+  --spacing-lg: 12px;
+  --spacing-xl: 16px;
+  --spacing-2xl: 24px;
+  --spacing-3xl: 32px;
+  
+  /* Typography - Exact sizes from images */
+  --font-size-xs: 12px;
+  --font-size-sm: 13px;
+  --font-size-base: 14px;
+  --font-size-md: 16px;
+  --font-size-lg: 18px;
+  --font-size-xl: 20px;
+  --font-size-2xl: 24px;
+  
+  --font-weight-regular: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-pill: 9999px;
+  
+  /* Transitions */
+  --transition-fast: 150ms ease-in-out;
+}
+
+/* Utility Classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 var(--spacing-xl);
+}
+
+.card {
+  background: var(--color-bg-white);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-sm);
+  padding: var(--spacing-xl);
+}
+
+.empty-state {
+  text-align: center;
+  color: var(--color-text-tertiary);
+  font-size: var(--font-size-base);
+  padding: var(--spacing-2xl);
+}
+
+.loading-skeleton {
+  background: var(--color-bg-very-light);
+  border-radius: var(--radius-sm);
+  animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.highlight-flash {
+  animation: highlightFlash 800ms ease-out;
+}
+
+@keyframes highlightFlash {
+  0% {
+    background-color: var(--color-highlight);
+  }
+  100% {
+    background-color: transparent;
+  }
+}

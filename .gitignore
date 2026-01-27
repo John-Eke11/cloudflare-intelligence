@@ -1,0 +1,21 @@
+# node_modules
+# dist
+# .DS_Store
+# *.log
+
+# Node
+node_modules/
+dist/
+
+# Cloudflare / Wrangler
+.wrangler/
+
+# Env files
+.env
+.env.*
+
+# OS
+.DS_Store
+
+# Logs
+npm-debug.log*

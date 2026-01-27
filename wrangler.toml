@@ -1,0 +1,5 @@
+name = "cloudflare-intelligence"
+main = "src/worker.js"
+compatibility_date = "2026-01-26"
+
+assets = { directory = "./dist", binding = "ASSETS" }

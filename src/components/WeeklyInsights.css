@@ -1,0 +1,81 @@
+.weekly-insights {
+  margin-top: 32px;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 24px 16px 24px;
+}
+
+.section-header {
+  font-size: 16px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+
+.insights-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.insight-card {
+  background: #FFFFFF;
+  border: 1px solid #E0E3E8;
+  border-radius: 8px;
+  padding: 24px 20px;
+  position: relative;
+}
+
+.week-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000000;
+  margin-bottom: 12px;
+}
+
+.ai-summary {
+  font-size: 14px;
+  color: #333333;
+  line-height: 1.6;
+  margin-bottom: 0;
+  font-weight: 400;
+}
+
+.view-details-link {
+  position: absolute;
+  top: 24px;
+  right: 20px;
+  background: none;
+  border: none;
+  color: #2C7BFF;
+  font-size: 14px;
+  font-weight: 400;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  transition: color 150ms ease-in-out;
+  text-decoration: none;
+  line-height: 1.5;
+}
+
+.view-details-link:hover {
+  color: #1e5fcc;
+  text-decoration: underline;
+}
+
+.view-details-link:focus {
+  outline: 2px solid #2C7BFF;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+.empty-state {
+  text-align: center;
+  color: #666666;
+  font-size: 14px;
+  padding: 64px;
+}
