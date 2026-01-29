@@ -5,7 +5,12 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "dev:worker": "npm run build && wrangler dev",
+    "start": "npm run build && wrangler dev",
+    "deploy": "npm run build && wrangler deploy",
+    "seed:generate": "node scripts/generate_mock_data.mjs",
+    "seed:remote": "node scripts/seed_remote.mjs"
   },
   "dependencies": {
     "react": "^18.2.0",

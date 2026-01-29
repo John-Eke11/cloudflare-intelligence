@@ -79,3 +79,38 @@
   font-size: 14px;
   padding: 64px;
 }
+
+.insights-loading {
+  background: #FFFFFF;
+  border: 1px solid #E0E3E8;
+  border-radius: 8px;
+  padding: 48px 24px;
+  text-align: center;
+}
+
+.insights-loading-spinner {
+  width: 32px;
+  height: 32px;
+  margin: 0 auto 16px;
+  border: 3px solid #E0E3E8;
+  border-top-color: #2C7BFF;
+  border-radius: 50%;
+  animation: insights-spin 0.8s linear infinite;
+}
+
+@keyframes insights-spin {
+  to { transform: rotate(360deg); }
+}
+
+.insights-loading-text {
+  font-size: 15px;
+  font-weight: 600;
+  color: #000000;
+  margin: 0 0 8px;
+}
+
+.insights-loading-hint {
+  font-size: 13px;
+  color: #666666;
+  margin: 0;
+}

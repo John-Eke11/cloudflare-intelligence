@@ -2,7 +2,7 @@ import { useNavigate } from 'react-router-dom'
 import { format } from 'date-fns'
 import './WeeklyInsights.css'
 
-function WeeklyInsights({ insights, onWeekClick }) {
+function WeeklyInsights({ insights, loading, onWeekClick }) {
   const navigate = useNavigate()
 
   const handleViewDetails = (weekStart) => {
@@ -18,11 +18,24 @@ function WeeklyInsights({ insights, onWeekClick }) {
     }
   }
 
+  if (loading) {
+    return (
+      <div className="weekly-insights">
+        <h2 className="section-header">Weekly Insights</h2>
+        <div className="insights-loading">
+          <div className="insights-loading-spinner" aria-hidden />
+          <p className="insights-loading-text">Generating AI summaries…</p>
+          <p className="insights-loading-hint">This may take 15–30 seconds for the current week and last 2 weeks.</p>
+        </div>
+      </div>
+    )
+  }
+
   if (!insights || insights.length === 0) {
     return (
       <div className="weekly-insights">
         <h2 className="section-header">Weekly Insights</h2>
-        <div className="card">
+        <div className="insight-card">
           <div className="empty-state">No weekly insights available</div>
         </div>
       </div>
@@ -36,7 +49,7 @@ function WeeklyInsights({ insights, onWeekClick }) {
         {insights.map((insight, index) => (
           <div key={index} className="insight-card" id={`week-${insight.weekStart.getTime()}`}>
             <div className="week-label">
-              Week of {format(insight.weekStart, 'MMM d')}–{format(insight.weekEnd, 'MMM d')}
+              {format(insight.weekStart, 'MMM d')}–{format(insight.weekEnd, 'MMM d')}
             </div>
             <div className="ai-summary">{insight.summary}</div>
             <button

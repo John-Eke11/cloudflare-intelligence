@@ -3,3 +3,17 @@ main = "src/worker.js"
 compatibility_date = "2026-01-26"
 
 assets = { directory = "./dist", binding = "ASSETS" }
+
+[[d1_databases]]
+binding = "DB"
+database_name = "cloudflare_intelligence_db"
+database_id = "48c75f43-23db-4eec-9b67-02d72dcc74e5"
+
+[ai]
+binding = "AI"
+
+[[workflows]]
+name = "executive-summary-workflow"
+binding = "EXEC_SUMMARY_WF"
+class_name = "ExecutiveSummaryWorkflow"
+
